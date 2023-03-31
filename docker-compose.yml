@@ -1,22 +1,22 @@
 version: '3'
 services:
-  train:
-    image: sailokeshbasava/train:v1
+  tarin:
+    image: rahamshaik/phonepaytrain:v1
     ports:
-      - "80:80"
+      - "8005:80"
     deploy:
-      replicas: 2
-  
-  movie:
-    image: sailokeshbasava/movie:v1
-    ports:
-      - "81:80"
-    deploy:
-      replicas: 2
+      replicas: 3
 
+  movie:
+    image: rahamshaik/phonepaymovie:v1
+    ports:
+      - "8006:80"
+    deploy:
+      replicas: 3
+      
   recharge:
-  image: sailokeshbasava/recharge:v1
-  ports:
-    - "82:80"
-  deploy:
-    replicas: 2
+    image: rahamshaik/phonepayrecharge:v1
+    ports:
+      - "8007:80"
+    deploy:
+      replicas: 3
