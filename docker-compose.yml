@@ -1,0 +1,22 @@
+version: '3'
+sevices:
+  train:
+    image: sailokeshbasava/train:v1
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 2
+  
+  movie:
+    image: sailokeshbasava/movie:v1
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 2
+
+  recharge:
+  image: sailokeshbasava/recharge:v1
+  ports:
+    - "82:80"
+  deploy:
+    replicas: 2
